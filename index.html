@@ -48,12 +48,12 @@
                 </div>
 
 
-                <table class="table table-bordered col-xs">
+                <table class="table table-bordered table-responsive-sm">
                     <thead class="table">
                       <tr>
-                        <th scope="col">No</th>
+                        <!-- <th scope="col">No</th> -->
                         <th scope="col">Item</th>
-                        <th scope="col" class="text-end">Jumlah</th>
+                        <th scope="col" class="text-end">Qty</th>
                         <th scope="col" class="text-end">Harga</th>
                         <th scope="col" class="text-end">Hasil</th>
                         <th scope="col" class="NoPrint">                         
@@ -65,7 +65,7 @@
                     </thead>
                     <tbody id="TBody">
                       <tr id="TRow" class="d-none">
-                        <th scope="row">1</th>
+                       
                         <td><input type="text" class="form-control" ></td>
                         <td><input type="number" class="form-control text-end" name="qty" onchange="add(this);"></td>
                         <td><input type="number" class="form-control text-end" name="rate"  onchange="add(this);"></td>
@@ -76,22 +76,26 @@
                   </table>
 
 
-                  <div class="row">
+                  <div class="row mb-4">
                     <div class="col-8">
                       
                         <button type="button" class="btn btn-primary" onclick="printInvoice()">Print</button>
 
                     </div>
+                    
+                </div>
+
+                <div class="row mt-4">
                     <div class="col-4">
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-4">
                             <span class="input-group-text" >Sub Total</span>
                             <input type="number" class="form-control text-end" id="FTotal" name="FTotal" disabled="">
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-4">
                             <span class="input-group-text" >PPN</span>
                             <input type="number" class="form-control text-end" id="FGST" name="FGST" onchange="countTotal()">
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-4">
                             <span class="input-group-text" >Total Bayar</span>
                             <input type="number" class="form-control text-end" id="FNet" name="FNet" disabled="">
                         </div>
