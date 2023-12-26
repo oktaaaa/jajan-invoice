@@ -35,7 +35,7 @@ function add(row){
     let amount =  qty * rate
     document.getElementsByName("amt")[getNum].value = amount
 
-    GetTotal()
+    countTotal()
 }
 
 function countTotal(){
@@ -50,6 +50,6 @@ function countTotal(){
     document.getElementById("FTotal").value = sum
 
     var gst =  document.getElementById("FGST").value;
-    var net = +(sum) + +(gst);
+    var net = sum + (sum * gst/100)
     document.getElementById("FNet").value = net;
 }
